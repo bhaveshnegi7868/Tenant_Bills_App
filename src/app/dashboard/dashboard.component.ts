@@ -71,6 +71,15 @@ export class DashboardComponent implements OnInit {
 
       seq2 = 0;
   };
+  clearBill(id:any) {
+    console.log(this.tenants)
+    console.log(id) 
+    this.tenants.filter( val => {
+      if (id === val.id && val.submitted === false) {
+        val.submitted = true
+      }
+    })
+  }
 
   getClearedtenants(data) {
    this.billsubmitted = data.filter( val => {

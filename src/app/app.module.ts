@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
-
+import {MatButtonModule} from '@angular/material/button';
 import { AppComponent } from './app.component';
 import { ToastrModule } from 'ngx-toastr';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -38,6 +38,7 @@ import { UserDataService } from './services/user-data.service';
     HttpModule,
     ComponentsModule,
     MatCheckboxModule,
+    MatButtonModule,
     RouterModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
