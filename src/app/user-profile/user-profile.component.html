@@ -1,0 +1,42 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title">Tenant Profile</h4>
+                  </div>
+                  <div class="card-body">
+                      <form (ngSubmit)="onSubmit()"  #userForm="ngForm">
+                          <div class="row">
+                              <div class="col-md-6">
+                                <mat-form-field class="example-full-width">
+                                  <input name="name" [(ngModel)]="userData.name" required matInput placeholder="Full Name" type="text">
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-6">
+                                <mat-form-field class="example-full-width">
+                                  <input name="id"required matInput [(ngModel)]="userData.id" placeholder="CA No." type="text">
+                                </mat-form-field>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-12">
+                                <mat-form-field class="example-full-width">
+                                  <input name="address" required matInput [(ngModel)]="userData.address" placeholder="Address" type="text">
+                                </mat-form-field>
+                              </div>
+                          </div>
+                          <div class="row mt-3">
+                              <div class="col-md-4">
+                                  <input name="submitted" [(ngModel)]="userData.submitted" type="checkbox"><mat-label style="color: #727782;font-family: Arial, Helvetica, sans-serif;" class="ml-3">Bill Submission Status</mat-label>
+                                  </div>
+                          </div>
+                          <button mat-raised-button type="submit" [disabled]="!userForm.form.valid" class="btn btn-danger pull-right">Add Profile</button>
+                          <div class="clearfix"></div>
+                          <!-- <pre>{{userForm.value | json}}</pre> -->
+                      </form>
+                  </div>
+              </div>
+      </div>
+  </div>
+</div>
