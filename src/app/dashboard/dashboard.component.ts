@@ -79,6 +79,7 @@ export class DashboardComponent implements OnInit {
         val.submitted = true
       }
     })
+    this.getClearedtenants(this.tenants)
   }
 
   getClearedtenants(data) {
